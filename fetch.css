@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.header{
+    width: 80vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, .40) url(https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border-radius: 22px;
+    margin-bottom: 3%;
+}
+
+.header h1{
+    font-size: 4.0em;
+    color: white;
+    text-align: center;
+}
+
+.header p{
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+}
+
+.detail{
+    width: 80vw;
+    height: 7vh;
+    background-color: chartreuse;
+    border-radius: 22px;
+    margin-bottom: 1%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 40px #aeaeae;
+}
+
+.detail p{
+    margin: 70px;
+    font-weight: bold;
+}
+
+#list-nama{
+    display: grid;
+}
+
+.card{
+    display: flex;
+    width: 1150px;
+    height: 200px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border-radius: 22px;
+    text-align: center;
+}
+
+td{
+    margin: 80px;
+}
+
+
+
+
+
+
+
+/* ini adalah komentar di CSS */

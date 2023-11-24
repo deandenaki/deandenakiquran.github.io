@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fetch.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Website Al-Quran Online</h1>
+            <p>Akses Quran dengan Website</p>
+        </div>
+        <div class="detail">
+            <p>Nama Surah</p>
+            <p>ayat</p>
+            <p>Surah ke</p>
+            <p>Asal Surah</p>
+            <p>Lantunan surah</p>
+        </div>
+        <table>
+            <thead>
+            </thead>
+            <tbody id="list-nama">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const api = 'dataquran.json'
+        const listData = document.getElementById('list-nama');
+
+        fetch(api).then(Response => Response.json()).then(data => {
+
+            data.forEach(el => {
+                const row = document.createElement('tr');
+                row.classList.add('card');
+                const namasurat = document.createElement('td');
+                namasurat.textContent =el.name;
+
+                const ayat = document.createElement('td');
+                ayat.textContent =el.number_of_ayah;
+
+                const surah = document.createElement('td');
+                surah.textContent =el.number_of_surah;
+
+                const tempat = document.createElement('td');
+                tempat.textContent =el.place;
+
+                
+                const audio = document.createElement('audio');
+                audio.setAttribute('controls','')
+                audio.src = el.recitation;
+
+                listData.appendChild(row);
+                row.appendChild(namasurat)
+                row.appendChild(ayat);
+                row.appendChild(surah);
+                row.appendChild(tempat);
+                row.appendChild(audio);
+            });
+
+        })
+    </script>
+</body>
+</html>
